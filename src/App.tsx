@@ -1,9 +1,8 @@
-import { useState } from 'react'
 import { RouterProvider } from 'react-router-dom'
-import { About } from './pages/About'
-import { Home } from './pages/Home'
-import { Layout } from './pages/Layout'
+
 import { router } from './router'
+
+import { GlobalStyle } from './assets/styles/global'
 
 function App() {
   return (
@@ -18,6 +17,7 @@ function App() {
       </BrowserRouter> */}
 
       <RouterProvider router={router} />
+      <GlobalStyle />
     </>
   )
 }
