@@ -2,7 +2,7 @@ import { RouterProvider } from 'react-router-dom'
 
 import { router } from './router'
 
-import { GlobalStyle } from './assets/styles/global'
+import { GlobalStyles } from './assets/styles/global'
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       </BrowserRouter> */}
 
       <RouterProvider router={router} />
-      <GlobalStyle />
+      <GlobalStyles />
     </>
   )
 }
