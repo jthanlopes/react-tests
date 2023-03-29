@@ -8,4 +8,5 @@ export const HeaderContainer = styled.header`
   justify-content: center;
 
   margin-bottom: 1rem;
+  border: 10px dotted pink;
 `
