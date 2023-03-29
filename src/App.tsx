@@ -1,7 +1,8 @@
 import { RouterProvider } from 'react-router-dom'
 
 import { router } from './router'
-
+import { ThemeProvider } from 'styled-components'
+import { defaultTheme } from './assets/styles/themes/default'
 import { GlobalStyles } from './assets/styles/global'
 
 function App() {
@@ -16,8 +17,10 @@ function App() {
         </Routes>
       </BrowserRouter> */}
 
-      <RouterProvider router={router} />
-      <GlobalStyles />
+      <ThemeProvider theme={defaultTheme}>
+        <RouterProvider router={router} />
+        <GlobalStyles />
+      </ThemeProvider>
     </>
   )
 }
