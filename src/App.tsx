@@ -4,6 +4,7 @@ import { router } from './router'
 import { ThemeProvider } from 'styled-components'
 import { defaultTheme } from './assets/styles/themes/default'
 import { GlobalStyles } from './assets/styles/global'
+import { ProductProvider } from './contexts/ProductContext'
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
       </BrowserRouter> */}
 
       <ThemeProvider theme={defaultTheme}>
-        <RouterProvider router={router} />
+        <ProductProvider>
+          <RouterProvider router={router} />
+        </ProductProvider>
         <GlobalStyles />
       </ThemeProvider>
     </>
