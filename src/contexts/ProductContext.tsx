@@ -16,13 +16,13 @@ interface ProductProviderProps {
 
 const ProductContext = createContext<ProductContextData>({} as ProductContextData);
 
-const products = [{
-  id: '123',
-  name: 'Product test 1',
-  description: 'Product description'
-}];
-
 export function ProductProvider({ children }: ProductProviderProps) {
+  const products = [{
+    id: '123',
+    name: 'Product test 1',
+    description: 'Product description'
+  }];
+
   return (
     <ProductContext.Provider value={{products}}>
       {children}
